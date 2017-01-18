@@ -1,0 +1,52 @@
+
+ <form name="paymentForm">
+    <div>
+        <div class="container-fluid" data-ng-controller="parameterCtrl as pm">
+            <div data-ng-if ="vm.showComponents">
+                <div class="form-group col-lg-6" >
+                    <label for="exampleSelect1">Growth Type</label>
+                    <drop-down options='vm.responseData.l_GrowthType' selectedOption="info.paymentDetails.growthselectedData" ></drop-down>
+                    <span>{{vm.errorMessage.growthselectedData}}</span>
+                </div>
+                <div data-ng-if = "!(pm.paymentDetails.growthselectedData=== 'Percent')" class="form-group col-lg-6" data-ng-model="pm.paymentDetails.accountingcostcenter">
+                    <label for="exampleSelect1">Fixed Growth</label>
+                    <input class="form-control" type="text">
+                </div>
+                <div data-ng-if= "pm.paymentDetails.growthselectedData=== 'Percent'" class="form-group col-lg-6" data-ng-model="pm.paymentDetails.accountingcostcenter">
+                    <label for="exampleSelect1">Percent Growth</label>
+                    <input class="form-control" type="text">
+                </div>
+                <div class="col-lg-12 col-md-12" data-ng-model="pm.paymentDetails.numberofschedules">
+                    <div class="form-group col-lg-6">
+                        <label for="exampleSelect1">Number of Schedules</label>
+                        <input class="form-control" type="text">
+                    </div>
+                    <div class="form-group col-lg-6" data-ng-model="pm.paymentDetails.adjust">
+                        <label for="exampleSelect1">Adjust Every(X) Months</label>
+                        <input class="form-control" type="text">
+                    </div>
+                </div>
+                <div class="col-md-8 col-lg-8" >
+                    <div class="form-group col-lg-4">
+                        <label for="exampleSelect1">Charge Amount Basis</label>
+                        <drop-down options='vm.responseData.l_ChargeAmountBasis' selectedOption="info.paymentDetails.chargeAmountselectedData" ></drop-down>
+                        <span>{{vm.errorMessage.chargeAmountselectedData}}</span>
+                    </div>
+                    <div class="form-group col-md-4 col-lg-4" data-ng-model="paymentdetails.contract">
+                        <div class="col-md-12 col-lg-12">
+                            <label for="exampleSelect1">Contract rentable</label>
+                        </div>
+                        <div>
+                            <div class="col-md-6 col-lg-6"><input class=" form-control" type="text"></div>
+                            <div class="col-md-6 col-lg-6"><lable>square-feet</lable></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-lg-4" data-ng-model="paymentdetails.amountperbasis">
+                <label for="exampleSelect1">Amount Per Basis</label>
+                <input class="form-control" type="text">
+            </div>
+        </div>
+    </div>
+</form>

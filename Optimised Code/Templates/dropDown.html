@@ -1,0 +1,12 @@
+<div class="input-group">
+    <input type="text" class="form-control input-field" type="text" placeholder="select" name = "payment" data-ng-model="selectedOption">
+    <div class="input-group-btn">
+        <button class="iconButton btn btn-default"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="submit"><i class="fa fa-angle-down"></i></button>
+        <div class="dropdown-menu list-dropdown list-style">
+            <input type="text" class="form-control input-field" placeholder="select" data-ng-model= "search"><br><br>
+            <div data-ng-repeat="option in options | filter:search track by $index" data-ng-click='selecting(option)'>
+                <li>{{option}}</li>
+            </div>
+        </div>
+    </div>
+</div>

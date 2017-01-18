@@ -1,0 +1,61 @@
+
+
+<div class="col-md-12 col-lg-12" data-ng-controller="informationCtrl as info"> 
+    <div class="form-group col-lg-6">
+        <label for="exampleSelect1">Payment Type</label>
+         <drop-down options='vm.responseData.c_paymentType' selected-option="info.paymentDetails.paymentvalue" ></drop-down>
+         <span>{{vm.errorMessage.paymentvalue}}</span>
+    </div>
+    <div class="form-group col-lg-6">
+        <label>Accounting Type</label>
+        <drop-down options='vm.responseData.l_AccountingType' selected-option="info.paymentDetails.selectedaccountingData" ></drop-down>
+        <span>{{vm.errorMessage.selectedaccountingData}}</span>
+    </div>
+    <div class="form-group col-lg-4">
+        <label for="exampleSelect1">Frequency</label>
+        <drop-down options='vm.responseData.c_frequecyType' selected-option="info.paymentDetails.selectedfrequencyData" ></drop-down>
+        <span>{{vm.errorMessage.selectedfrequencyData}}</span>
+    </div>
+    <div class='col-md-4'>
+        <span>Period Start Date<span class = "sup">*</span><span>
+        <div class="input-group date" data-provide="datepicker" >
+            <input type="text" name = 'payStart' class="form-control" data-ng-model="info.paymentDetails.paymentStart" placeholder="mm/dd/yyyy" required = 'required'>
+            <span class="input-group-addon">
+            <i class="fa fa-calendar-o"></i>
+            </span>
+        </div>
+        <span>{{vm.errorMessage.paymentStart}}</span>
+    </div> 
+    <div class="form-group col-lg-4">
+        <label for="exampleSelect1">Payment Timing</label>
+        <drop-down options='vm.responseData.l_PaymentTiming' selected-option="info.paymentDetails.selectedpaymenttimingData" ></drop-down>
+         <span>{{vm.errorMessage.selectedpaymenttimingData}}</span>
+  </div>
+    <div  class="form-group col-lg-4" data-ng-if="!(info.paymentDetails.selectedfrequencyData === 'Other') && !(info.paymentDetails.selectedfrequencyData === 'Monthly')">
+        <label for="exampleSelect1">Payment Due On</label>
+        <drop-down options='vm.responseData.l_PaymentDueOn' selected-option="info.paymentDetails.selectedpaymentdueonData" ></drop-down>
+        <span>{{vm.errorMessage.selectedpaymentdueonData}}</span>
+     </div>
+    <div  class="form-group col-lg-4"data-ng-if="!(info.paymentDetails.selectedfrequencyData === 'Other') && !(info.paymentDetails.selectedpaymentdueonData === 'Specific Day of Period')">
+        <label for="exampleSelect1">Payment Due Day</label>
+        <drop-down options='vm.responseData.l_PaymentDueDay' selected-option="info.paymentDetails.selectedpaymentduedayData" ></drop-down>
+        <span>{{vm.errorMessage.selectedpaymentduedayData}}</span>
+    </div>
+    <div class="form-group col-lg-4" >
+        <label for="exampleSelect1">Accounting Cost Center</label>
+        <input class="form-control" type="text" data-ng-model="info.paymentDetails.accountingcost">
+    </div>
+    <div class="form-check col-lg-4" data-ng-model="info.paymentDetails.checkbox">
+        <label class="form-check-label">
+        <input type="checkbox" class="form-check-input">
+        option Term Payment
+        </label>
+    </div>
+    <div class="form-group col-lg-12">
+        <label for="exampleTextarea">Description</label>
+        <textarea class="form-control" id="exampleTextarea" rows="2"></textarea>
+    </div>
+</div>
+    
+
+ 

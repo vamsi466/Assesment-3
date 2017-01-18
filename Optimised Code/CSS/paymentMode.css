@@ -1,0 +1,55 @@
+.inner-padding{
+	padding-top:40px;
+}
+
+.title{
+	background-color:rgb(234,234,234);
+}
+
+.table> tr{
+	border-bottom:1px solid black;
+}
+.text{
+	color:rgb(137,138,142);
+}
+
+.sidearrow:after
+{
+	font-family: 'Glyphicons Halflings';
+	content:  "\e114"; 
+	float: right;
+	margin-top:-10px;
+}
+.sidearrow.collapsed:after
+{
+	content: "\e080";
+}
+
+/*addButton styling*/
+.addButton{
+	border-radius: 0px;
+	color: #fff;
+	background-color: rgb(227,241,226);
+	border: 1px solid rgb(227,241,226);
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 1.3333333;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	color:rgb(121,131,120);
+}
+.addButton:focus{
+	outline:none;
+}
+
+.iconButton{
+	border-left:none;
+	border-top-right-radius: 4px !important;
+	border-bottom-right-radius: 4px !important;
+}
+.list-style{
+	overflow-y:scroll;
+	height:150px;
+	padding:5px;
+}

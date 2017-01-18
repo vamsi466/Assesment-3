@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--including all the required library files required css-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="Assets/Font Awesome/css/font-awesome.css">
+		<link rel="stylesheet" href="Assets/Font Awesome/css/font-awesome.min.css">
+		<link href="CSS/libraryFiles/jquery-ui.min.css" rel="stylesheet">
+		<link href="CSS/libraryFiles/datepicker.css" rel="stylesheet">
+
+		<!--Application CSS file is included-->
+		<link href="CSS/paymentMode.css" rel="stylesheet">
+	</head>
+
+	<!--ngApp declared-->
+	<body data-ng-app="paymentMode">
+		<div class="container-fluid inner-padding">
+
+			<!--Table to display data selected which is rendered to main page by routidata-ng-->
+			<ui-view></ui-view>
+
+			
+		</div>
+
+			<!--Including all Library Files-->
+			
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<script src="JS/libraryFiles/angular.min.js"></script>
+			<script src="https://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+			<script src="JS/libraryFiles/bootstrap-datepicker.js"></script>
+			<script src ="JS/libraryFiles/ui-bootstrap.min.js"></script>
+			
+			
+			<!--controller for including module-->
+			<script src="JS//Module/paymentMode.js"></script>
+
+			<!--routing.js is included-->
+			<script src="JS/Routing/routing.js"></script>
+
+
+			<!--########### Rendering all controllers ###############-->
+			
+			<!--controller in table template-->
+			<script src="JS/Controllers/mainPageCtrl.js"></script>
+
+			<!--controller in initial modalForm-->
+			<script src="JS/Controllers/modalFormCtrl.js"></script>
+			
+			<!--payment information template controller-->
+			<script src="JS/Controllers/informationCtrl.js"></script>
+
+			<!--payment parameter template controller-->
+			<script src="JS/Controllers/parametrCtrl.js"></script>
+
+			<!--edit confirmation contyroller-->
+			<script src="JS/Controllers/editCtrl.js"></script>
+
+			<!--controller for delete template-->
+			<script src="JS/Controllers/deleteCtrl.js"></script>
+		 
+
+			<!--######### Application service calls #########-->
+
+			<!--Ajax call service-->
+			<script src="JS/Services/ajaxCallService.js"></script>
+
+			<!--Commonservice to all controllers-->
+			<script src="JS/Services/commonService.js"></script>
+
+
+			<!--######## Application Directives #######-->
+
+			<!-- Directive for drop down of options-->
+			<script src ="JS/Directives/dropDownDirective.js"></script>
+
+	</body>
+</html>
